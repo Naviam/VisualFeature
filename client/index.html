@@ -59,8 +59,9 @@
     <script src="/js/angular.min.js"></script>
     <script>
         $(function() {
-            $('p').hide('slow');
-            alert('The paragraph is now hidden.');
+            $('p').hide('slow', function () {
+                alert('The paragraph is now hidden.');
+            });
         });
     </script>
   </body>
