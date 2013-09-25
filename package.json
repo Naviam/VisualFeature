@@ -1,10 +1,10 @@
 {
-  "name": "chat-example",
+  "name": "Visual-Feature",
   "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server",
-  "main": "server.js",
+  "description": "Release Manager",
+  "main": "app.js",
   "repository": "",
-  "author": "Mostafa Eweda <mostafa@c9.io>",
+  "author": "Vitali Hatalski <vhatalski@naviam.com>",
   "dependencies": {
     "async": "~0.2.8",
     "express": "~3.2.4",
