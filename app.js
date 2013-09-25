@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var routes = require('./routes');
+var sns = require('./routes/sns');
 // var user = require('./routes/user');
 // var environments = require('./routes/environments');
 var path = require('path');
@@ -24,6 +25,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.post('/sns', sns.sns);
 
 http.createServer(app).listen(process.env.PORT, process.env.IP, function(){
   console.log('Express server listening on port ' + app.get('port'));
