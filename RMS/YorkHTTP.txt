@@ -1,0 +1,54 @@
+FYI
+
+Serge
+
+
+
+-----Original Message-----
+From: Jarrid Kleinfelter [mailto:jarrid.kleinfelter@york.com]
+Sent: Thursday, March 31, 2005 2:48 PM
+To: slubensky@servicechannel.com
+Cc: 'Scott Beinhower'; Jonah.McWilliams@york.com
+Subject: Web Service Information
+
+
+Our web service is completed and you will soon be able to begin sending test
+XML to us. What we have set up is a web service that you will supply the
+following 3 values:
+
+GAP <- Store identifier
+8126C8B19C <- Customer ID key
+XML data as a string
+
+Ex. webService.postXML("GAP", "8126C8B19C", msg)
+
+Our Web Service address is
+https://204.238.139.13/WebService/YORKService.asmx and the function is
+called postXML
+
+We are going to be using SSL in conjunction with the store ID key to enable
+security. The Key will ensure that you are the only person that can post
+data to us, you will need to hardcode this into your client app. The SSL
+will handle encryption of the data being transferred including the key. One
+thing to note about the SSL certificate is that currently we are using an
+openSSL certificate which is not from a trusted CA such as Verisign. Also we
+are only using a server certificate so you will not need to provide a client
+certificate.
+
+The security team is in the process of getting a CA server from Verisign, at
+that point we will have a certified certificate and you can modify your
+client to only accept certificates from trusted CA's.
+
+If you post data to the web service today you will get an error because we
+do not yet have the SSL port 443 open in the firewall to our web services
+server. We will notify you when this port is open and you will successfully
+be able to post XML.
+
+Once you are able to post XML we will return a 1 on success and a 0 on
+failure.
+
+Please let me know if you have any questions.
+
+------------------------------------
+ "Owning with easy" since 2/15/2005
+

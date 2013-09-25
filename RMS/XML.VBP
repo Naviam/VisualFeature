@@ -1,0 +1,36 @@
+Type=Exe
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\WINNT\System32\stdole2.tlb#OLE Automation
+Reference=*\G{3FA7DEA7-6438-101B-ACC1-00AA00423326}#1.15#0#..\..\..\PROGRA~1\COMMON~1\System\Mapi\1033\NT\CDO.DLL#Microsoft CDO 1.21 Library
+Reference=*\G{662901FC-6951-4854-9EB2-D9A2570F2B2E}#5.1#0#..\..\..\WINNT\system32\winhttp.dll#Microsoft WinHTTP Services, version 5.1
+Reference=*\G{00000206-0000-0010-8000-00AA006D2EA4}#2.6#0#..\..\Common Files\System\ADO\msado15.dll#Microsoft ActiveX Data Objects 2.6 Library
+Form=Form1.frm
+Startup="Form1"
+ExeName32="XMLRMS_LIVE-TIMED.exe"
+Command32=""
+Name="Xml"
+HelpContextID="0"
+CompatibleMode="0"
+MajorVer=1
+MinorVer=0
+RevisionVer=0
+AutoIncrementVer=0
+ServerSupportFiles=0
+VersionCompanyName="SC"
+CompilationType=0
+OptimizationType=0
+FavorPentiumPro(tm)=0
+CodeViewDebugInfo=0
+NoAliasing=0
+BoundsCheck=0
+OverflowCheck=0
+FlPointCheck=0
+FDIVCheck=0
+UnroundedFP=0
+StartMode=0
+Unattended=0
+Retained=0
+ThreadPerObject=0
+MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

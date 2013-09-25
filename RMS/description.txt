@@ -1,0 +1,24 @@
+configuration settings per outgoing xml process
+
+visual cron configuration
+- web api call interval in minutes (default 4)
+- web api url
+
+web api configuration
+- logger configuration
+- database connection string
+
+web api method parameters
+- contractor end point url
+- provider id (or/and pin)
+
+web api method code
+start
+lastWo = determine the latest sent work order
+get work orders (with details) from staging table or / screc > lastWo for particular provider
+send these messages to Amazon SNS topic
+determine maximum work order from the list
+save this work order to amazon dynamodb table where pairs of pin providerid and last work order are columns
+end
+
+
