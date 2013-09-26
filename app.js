@@ -1,5 +1,7 @@
 var http = require('http');
 var express = require('express');
+var socket = require('socket.io');
+
 var routes = require('./routes');
 var sns = require('./routes/sns');
 // var user = require('./routes/user');
@@ -7,6 +9,7 @@ var sns = require('./routes/sns');
 var path = require('path');
 
 var app = express();
+//var io = socket.listen(app);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -25,6 +28,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/dashboard', routes.dashboard);
 app.post('/sns', sns.sns);
 
 http.createServer(app).listen(process.env.PORT, process.env.IP, function(){

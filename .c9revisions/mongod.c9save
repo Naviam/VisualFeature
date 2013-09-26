@@ -1,0 +1,1 @@
+{"ts":1380168765579,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"mongod --bind_ip=$IP --dbpath=data --nojournal --rest \"$@\"\n"]],"start1":0,"start2":0,"length1":0,"length2":59}]],"length":59}
