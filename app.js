@@ -29,6 +29,8 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/dashboard', routes.dashboard);
+app.get('/repositories/:org', routes.repositories);
+app.get('/stories/:owner/:repo', routes.stories);
 app.post('/sns', sns.sns);
 
 http.createServer(app).listen(process.env.PORT, process.env.IP, function(){

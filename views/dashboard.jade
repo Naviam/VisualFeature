@@ -1,7 +1,31 @@
 extends layout
 
 block content
-    h1 dashboard
-    ul
-        //li= user.login
+    div.row.row-offcanvas.row-offcanvas-right
+        div.col-xs-12.col-sm-9
+            p.pull-right.visible-xs
+                button.btn.btn-primary.btn-xs(type="button",data-toggle="offcanvas") toggle nav
+            div.row(data-bind="with: currentRepository")
+                <!-- ko foreach: stories -->
+                div.col-6.col-sm-6.col-lg-4
+                    h4(data-bind="text: title")
+                    p(data-bind="text: body")
+                <!-- /ko -->
+        div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
+            div.well.sidebar-nav
+                ul.nav(data-bind="foreach: organizations")
+                    li(data-bind="text: login")
+                    <!-- ko foreach: repositories -->
+                    li
+                        a(data-bind="text: name, click: $root.setCurrentRepository, attr: { href: url, title: name }")
+                    <!-- /ko -->
 block scripts
+    script(src='js/models/AppViewModel.js')
+    script.
+        $(function() {
+            var user = !{JSON.stringify(user)};
+            var orgs = !{JSON.stringify(orgs)};
+            var model = { user: user, orgs: orgs };
+            var viewmodel = new AppViewModel(model);
+            ko.applyBindings(viewmodel);
+        });
