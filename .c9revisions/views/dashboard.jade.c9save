@@ -1,0 +1,7 @@
+{"ts":1380289066256,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"extends layout\n\nblock content\n    h1 dashboard\n    ul\n        li= user.login\nblock scripts"]],"start1":0,"start2":0,"length1":0,"length2":90}]],"length":90}
+{"contributors":[],"silentsave":true,"ts":1380289083919,"patch":[[{"diffs":[[0,"t\n    h1"],[1,"g"],[0," dashboa"]],"start1":28,"start2":28,"length1":16,"length2":17}]],"length":91,"saved":false}
+{"ts":1380289085318,"patch":[[{"diffs":[[0,"t\n    h1"],[-1,"g"],[1,"="],[0," dashboa"]],"start1":28,"start2":28,"length1":17,"length2":17}]],"length":91,"saved":false}
+{"ts":1380289088369,"patch":[[{"diffs":[[0,"\n    h1="],[1," user"],[0," dashboa"]],"start1":29,"start2":29,"length1":16,"length2":21}]],"length":96,"saved":false}
+{"ts":1380289089375,"patch":[[{"diffs":[[0,"h1= user"],[1,".l"],[0," dashboa"]],"start1":34,"start2":34,"length1":16,"length2":18}]],"length":98,"saved":false}
+{"ts":1380289090431,"patch":[[{"diffs":[[0,"= user.l"],[1,"ogin"],[0," dashboa"]],"start1":36,"start2":36,"length1":16,"length2":20}]],"length":102,"saved":false}
+{"ts":1380289094475,"patch":[[{"diffs":[[0,"ogin"],[-1," dashboard"],[0,"\n   "]],"start1":44,"start2":44,"length1":18,"length2":8}]],"length":92,"saved":false}
