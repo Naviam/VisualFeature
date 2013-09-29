@@ -1,0 +1,10 @@
+.css-truncate-target {
+position: relative;
+top: -1px;
+vertical-align: middle;
+max-width: 250px;
+display: inline-block;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}

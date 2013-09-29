@@ -8,8 +8,13 @@ block content
             div.row(data-bind="with: currentRepository")
                 <!-- ko foreach: stories -->
                 div.col-6.col-sm-6.col-lg-4
-                    h4(data-bind="text: title")
-                    p(data-bind="text: body")
+                    h5.css-truncate-target.text-primary
+                        a(data-bind="attr: {href: html_url, title: title}",target="_blank")
+                            span(data-bind="text: number") 
+                            | : 
+                            span(data-bind="text: title")
+                    p
+                        em(data-bind="text: body")
                 <!-- /ko -->
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
             div.well.sidebar-nav
