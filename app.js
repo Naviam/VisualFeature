@@ -34,6 +34,7 @@ passport.deserializeUser(function(obj, done) {
 });
 
 // all environments
+app.set('host', process.env.IP || "127.0.0.1");
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
@@ -98,7 +99,7 @@ app.get('/repositories/:org', routes.repositories);
 app.get('/stories/:owner/:repo', routes.stories);
 app.post('/sns', sns.sns);
 
-http.createServer(app).listen(process.env.PORT, process.env.IP, function(){
+http.createServer(app).listen(app.get('port'), app.get('host'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
