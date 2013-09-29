@@ -8,11 +8,6 @@ var github = new GitHubApi({
     timeout: 5000
 });
 
-github.authenticate({
-    type: "oauth",
-    token: token
-});
-
 /*
  * GET home page.
  */
@@ -22,6 +17,11 @@ exports.index = function(req, res){
 };
 
 exports.dashboard = function(req, res) {
+    console.log("github user token: " + GLOBAL.GITHUB_ACCESS_TOKEN);
+    github.authenticate({
+        type: "oauth",
+        token: GLOBAL.GITHUB_ACCESS_TOKEN
+    });
     github.user.get({}, function(err, usr) {
         github.user.getOrgs({}, function(err, orgs) {
             console.log(err);
