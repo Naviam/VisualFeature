@@ -12,9 +12,9 @@ var app = express();
 //var io = socket.listen(app);
 
 // https://github.com/organizations/Naviam/settings/applications/60403
-var GITHUB_CLIENT_ID = "688b3527f940fb337d1f";
-var GITHUB_CLIENT_SECRET = "7411bdd4c7347721c414b2b260d6a8461f605d9b";
-var GITHUB_CALLBACK_URL = "http://visual-feature-c9-hatalski.c9.io/auth/github/callback";
+var GITHUB_CLIENT_ID = process.env.githubClientId || "688b3527f940fb337d1f";
+var GITHUB_CLIENT_SECRET = process.env.githubSecretKey || "7411bdd4c7347721c414b2b260d6a8461f605d9b";
+var GITHUB_CALLBACK_URL = "http://localhost:3000/auth/github/callback";
 
 GLOBAL.GITHUB_ACCESS_TOKEN = null;
 
@@ -99,8 +99,11 @@ app.get('/repositories/:org', routes.repositories);
 app.get('/stories/:owner/:repo', routes.stories);
 app.post('/sns', sns.sns);
 
-http.createServer(app).listen(app.get('port'), app.get('host'), function(){
+http.createServer(app).listen(app.get('port'), app.get('host'), function() {
   console.log('Express server listening on port ' + app.get('port'));
+  console.log('Environment GitHub ClientID : ' + process.env.githubClientId);
+  console.log('Environment GitHub SecretKey : ' + process.env.githubSecretKey);
+  console.log('Github callback url: ' + GITHUB_CALLBACK_URL);
 });
 
 // Simple route middleware to ensure user is authenticated.

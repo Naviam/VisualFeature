@@ -1,0 +1,23 @@
+
+
+organisations
+
+GOT RES? [ { login: 'servicechannel',
+    id: 331906,
+    url: 'https://api.github.com/orgs/servicechannel',
+    repos_url: 'https://api.github.com/orgs/servicechannel/repos',
+    events_url: 'https://api.github.com/orgs/servicechannel/events',
+    members_url: 'https://api.github.com/orgs/servicechannel/members{/member}',
+    public_members_url: 'https://api.github.com/orgs/servicechannel/public_members{/member}',
+    avatar_url: 'https://1.gravatar.com/avatar/4998403b5be974e3bf0a2310cdd31226?d=https%3A%2F%2Fidenticons.github.com%2Fe8486849619756fa2ab7bc408fce41df.png' },
+  { login: 'Naviam',
+    id: 4968914,
+    url: 'https://api.github.com/orgs/Naviam',
+    repos_url: 'https://api.github.com/orgs/Naviam/repos',
+    events_url: 'https://api.github.com/orgs/Naviam/events',
+    members_url: 'https://api.github.com/orgs/Naviam/members{/member}',
+    public_members_url: 'https://api.github.com/orgs/Naviam/public_members{/member}',
+    avatar_url: 'https://identicons.github.com/1de852d9883907a3d1cc7b7e6cdf638f.png' },
+  meta: { 'x-ratelimit-limit': '5000',
+    'x-ratelimit-remaining': '4998',
+    'x-oauth-scopes': 'user, public_repo, repo, gist' } ]
