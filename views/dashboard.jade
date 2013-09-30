@@ -1,5 +1,68 @@
 extends layout
 
+block navigation
+    div.navbar.navbar-default.navbar-static-top
+        div.container
+            div.navbar-header
+                button.navbar-toggle(type="button",data-toggle="collapse",data-target=".navbar-collapse")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="#") Visual Feature
+            div.navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li.dropdown
+                        a.dropdown-toggle(href="#",data-toggle="dropdown") Github
+                            b.caret
+                        ul.dropdown-menu
+                            li.active
+                                a(href="#",title="Switch to hatalski account") hatalski
+                            li
+                                a(href="#",title="Switch to naviamtest account") naviamtest
+                            li
+                                a(href="#",title="Switch to scteamcity account") scteamcity
+                    li.dropdown
+                        a.dropdown-toggle(href="#",data-toggle="dropdown") Github Enterprise
+                            b.caret
+                        ul.dropdown-menu
+                            li.dropdown-header ServiceChannel
+                            li
+                                a(href="#",title="Switch to vhatalski account") vhatalski
+                            li
+                                a(href="#",title="Switch to gitadmin account") gitadmin
+                    li
+                        a(href="#",title="Add integration with another source code hosting provider")
+                            span.glyphicon.glyphicon-plus-sign
+                            |  Code Provider
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown
+                        a.dropdown-toggle(href="#",data-toggle="dropdown")
+                            span.glyphicon.glyphicon-user
+                            |  vhatalski@naviam.com
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href="#")
+                                    span.glyphicon.glyphicon-picture
+                                    |  Profile
+                            li.divider
+                            li
+                                a(href="#")
+                                    span.glyphicon.glyphicon-transfer
+                                    |  Integrations
+                            li
+                                a(href="#")
+                                    span.glyphicon.glyphicon-cloud
+                                    |  Environments
+                            li
+                                a(href="#")
+                                    span.glyphicon.glyphicon-cog
+                                    |  Software Development Life Cycle Setup
+                            li.divider
+                            li
+                                a(href="#")
+                                    span.glyphicon.glyphicon-log-out
+                                    |  Logout
 block content
     div.row.row-offcanvas.row-offcanvas-right
         div.col-xs-12.col-sm-9
@@ -19,7 +82,10 @@ block content
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
             div.well.sidebar-nav
                 ul.nav(data-bind="foreach: organizations")
-                    li(data-bind="text: login")
+                    li
+                        span.glyphicon.glyphicon-collapse-down
+                        |  
+                        span(data-bind="text: login")
                     <!-- ko foreach: repositories -->
                     li
                         a(data-bind="text: name, click: $root.setCurrentRepository, attr: { href: url, title: name }")
