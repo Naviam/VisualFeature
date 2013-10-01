@@ -77,6 +77,14 @@ block content
                             | : 
                             span(data-bind="text: title")
                     p
+                        | Stories:
+                        |  
+                        <!-- ko foreach: storyLinks -->
+                        a(data-bind="attr: { href: url, title: title }", target="_blank")
+                            span.label.label-primary(data-bind="text: text")
+                        <!-- /ko -->
+                        |  
+                        span.label staging
                         em(data-bind="text: body")
                 <!-- /ko -->
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")

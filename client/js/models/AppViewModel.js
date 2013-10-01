@@ -1,7 +1,16 @@
-function pageState() {
-    this.githubLogin = null;
-    this.repository = null;
-    this.organization = null;
+function link (url, text, title) {
+    this.url = url;
+    this.text = text;
+    this.title = title;
+}
+
+function findLinksInString(str) {
+    geturl = new RegExp(
+          "(^|[ \t\r\n])((ftp|http|https|gopher|mailto|news|nntp|telnet|wais|file|prospero|aim|webcal):(([A-Za-z0-9$_.+!*(),;/?:@&~=-])|%[A-Fa-f0-9]{2}){2,}(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;/?:@&~=%-]*))?([A-Za-z0-9$_+!*();/?:~-]))"
+         ,"g"
+       );
+
+    return str.match(geturl) || "";
 }
 
 function organization(org) {
@@ -18,9 +27,37 @@ function organization(org) {
     self.getRepositories = function (org) {
         $.getJSON("/repositories/" + org, function(data) {
             self.repositories(data);
+            // TODO: if it has default repo set it current
         });
     };
     self.getRepositories(self.login);
+}
+
+function story(story) {
+    var self = this;
+    self.title = story.title;
+    self.number = story.number;
+    self.body = story.body;
+    self.html_url = story.html_url;
+
+    self.links = ko.computed(function () {
+        var links = findLinksInString(self.body);
+        return links;
+    });
+
+    self.storyLinks = ko.computed(function () {
+        var array = new Array();
+        console.log(self.links());
+        for (var index in self.links())
+        {
+            var lnk = self.links()[index];
+            console.log(lnk);
+            var text = lnk.substring(lnk.lastIndexOf('/') + 1);
+            array.unshift(new link(lnk, text, text));
+        }
+
+        return array;
+    });
 }
 
 function repository(repo) {
@@ -31,7 +68,11 @@ function repository(repo) {
 
     self.getCompletedStories = function (ownerName, repoName) {
         $.getJSON("/stories/" + ownerName + "/" + repoName, function(data) {
-            self.stories(data);
+            self.stories.removeAll();
+            $.each(data, function (index, value) {
+                self.stories.unshift(new story(value));
+            });
+            //self.stories(data);
         });
     };
     self.getCompletedStories(self.owner(), self.name());
@@ -39,8 +80,6 @@ function repository(repo) {
 
 function AppViewModel(model) {
     var self = this;
-
-    //self.state = ko.observable(pageState());
 
     self.user = ko.observable(model.user);
     self.currentRepository = ko.observable();
