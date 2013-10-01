@@ -80,16 +80,16 @@ block content
                         em(data-bind="text: body")
                 <!-- /ko -->
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
-            div.well.sidebar-nav
+            div#accordion.well.sidebar-nav4
                 ul.nav(data-bind="foreach: organizations")
                     li
-                        span.glyphicon.glyphicon-collapse-down
-                        |  
-                        span(data-bind="text: login")
-                    <!-- ko foreach: repositories -->
-                    li
-                        a(data-bind="text: name, click: $root.setCurrentRepository, attr: { href: url, title: name }")
-                    <!-- /ko -->
+                        a.accordion-toggle(data-bind="attr: { href: '#' + login }",data-toggle="collapse",data-parent="#accordion")
+                            span.glyphicon.glyphicon-collapse-down
+                            |  
+                            span(data-bind="text: login")
+                    ul.nav.panel-collapse.collapse(data-bind="foreach: repositories, attr: {id: login}")
+                        li
+                            a(data-bind="text: name, click: $root.setCurrentRepository, attr: { href: url, title: name }")
 block scripts
     script(src='js/models/AppViewModel.js')
     script.

@@ -7,8 +7,13 @@ function pageState() {
 function organization(org) {
     var self = this;
     self.login = org.login;
+    self.isCollapsed = ko.observable(false);
 
     self.repositories = ko.observableArray();
+
+    self.toggleCollapse = function () {
+        self.isCollapsed(!self.isCollapsed());
+    };
 
     self.getRepositories = function (org) {
         $.getJSON("/repositories/" + org, function(data) {
