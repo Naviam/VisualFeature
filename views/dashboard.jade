@@ -21,20 +21,33 @@ block navigation
                                 a(href="#",title="Switch to naviamtest account") naviamtest
                             li
                                 a(href="#",title="Switch to scteamcity account") scteamcity
-                    li.dropdown
-                        a.dropdown-toggle(href="#",data-toggle="dropdown") Github Enterprise
-                            b.caret
-                        ul.dropdown-menu
-                            li.dropdown-header ServiceChannel
+                            li.divider
+                            li.dropdown-header Enterprise (ServiceChannel)
                             li
                                 a(href="#",title="Switch to vhatalski account") vhatalski
                             li
                                 a(href="#",title="Switch to gitadmin account") gitadmin
-                    li
-                        a(href="#",title="Add integration with another source code hosting provider")
-                            span.glyphicon.glyphicon-plus-sign
-                            |  Code Provider
+                    li.dropdown
+                        a.dropdown-toggle(href="#",data-toggle="dropdown") Bitbucket
+                            b.caret
+                        ul.dropdown-menu
+                            li
+                                a(href="#",title="Switch to vhatalski account") vhatalski
+                            li
+                                a(href="#",title="Switch to gitadmin account") gitadmin
                 ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href="#",title="Code Hosting, Product Management and Continuous Integrations services integrations")
+                            span.glyphicon.glyphicon-transfer
+                            |  Integrations
+                    li
+                        a(href="#",title="Infrastructure Environments where code is deployed to")
+                            span.glyphicon.glyphicon-cloud
+                            |  Environments
+                    li
+                        a(href="#",title="Software Development Life Cycle Setup")
+                            span.glyphicon.glyphicon-cog
+                            |  SDLC
                     li.dropdown
                         a.dropdown-toggle(href="#",data-toggle="dropdown")
                             span.glyphicon.glyphicon-user
@@ -45,19 +58,6 @@ block navigation
                                 a(href="#")
                                     span.glyphicon.glyphicon-picture
                                     |  Profile
-                            li.divider
-                            li
-                                a(href="#")
-                                    span.glyphicon.glyphicon-transfer
-                                    |  Integrations
-                            li
-                                a(href="#")
-                                    span.glyphicon.glyphicon-cloud
-                                    |  Environments
-                            li
-                                a(href="#")
-                                    span.glyphicon.glyphicon-cog
-                                    |  Software Development Life Cycle Setup
                             li.divider
                             li
                                 a(href="#")
