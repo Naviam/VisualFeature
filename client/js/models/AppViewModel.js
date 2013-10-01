@@ -42,14 +42,20 @@ function organization(org) {
 
 function story(story) {
     var self = this;
-    self.title = story.title;
-    self.number = story.number;
-    self.body = story.body;
-    self.html_url = story.html_url;
+    self.title = ko.observable(story.title);
+    self.number = ko.observable(story.number);
+    self.body = ko.observable(story.body);
+    self.normalizedBody = ko.observable();
+    self.html_url = ko.observable(story.html_url);
 
     self.links = ko.computed(function () {
-        var links = findLinksInString(self.body);
-        // remove links from description
+        var links = findLinksInString(self.body());
+        // TODO: remove links from description
+        self.normalizedBody(self.body());
+        for (var i in links) {
+            self.normalizedBody(self.normalizedBody().replace(links[i], ""));
+        }
+        
         return links;
     });
 

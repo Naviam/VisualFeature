@@ -77,15 +77,18 @@ block content
                             | : 
                             span(data-bind="text: title")
                     p
-                        | Stories:
-                        |  
-                        <!-- ko foreach: storyLinks -->
-                        a(data-bind="attr: { href: url, title: title }", target="_blank")
-                            span.label.label-primary(data-bind="text: text")
-                        <!-- /ko -->
-                        |  
-                        span.label.label-primary staging
-                        em(data-bind="text: body")
+                        p(data-bind="visible: storyLinks().length > 0")
+                            | story:
+                            |  
+                            <!-- ko foreach: storyLinks -->
+                            a(data-bind="attr: { href: url, title: title }", target="_blank")
+                                span.label.label-primary(data-bind="text: text")
+                            <!-- /ko -->
+                        p
+                            | on: 
+                            |  
+                            span.label.label-primary staging
+                        em(data-bind="text: normalizedBody")
                 <!-- /ko -->
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
             div#accordion.well.sidebar-nav4
