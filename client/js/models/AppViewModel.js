@@ -27,7 +27,14 @@ function organization(org) {
     self.getRepositories = function (org) {
         $.getJSON("/repositories/" + org, function(data) {
             self.repositories(data);
-            // TODO: if it has default repo set it current
+            
+            var found = jQuery.grep(self.repositories(), function(r) {
+                // TODO: replace hardcoded name with user session variable
+                return r.name == "VisualFeature";
+            });
+            if (found.length == 1) {
+                window.viewmodel.setCurrentRepository(found[0]);
+            }
         });
     };
     self.getRepositories(self.login);
@@ -42,6 +49,7 @@ function story(story) {
 
     self.links = ko.computed(function () {
         var links = findLinksInString(self.body);
+        // remove links from description
         return links;
     });
 
@@ -89,6 +97,7 @@ function AppViewModel(model) {
     }
 
     self.setCurrentRepository = function (repo) {
+        console.log(repo);
         self.currentRepository(new repository(repo));
     }
 }

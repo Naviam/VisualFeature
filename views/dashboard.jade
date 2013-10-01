@@ -84,7 +84,7 @@ block content
                             span.label.label-primary(data-bind="text: text")
                         <!-- /ko -->
                         |  
-                        span.label staging
+                        span.label.label-primary staging
                         em(data-bind="text: body")
                 <!-- /ko -->
         div#sidebar.col-xs-6.col-sm-3.sidebar-offcanvas(role="navigation")
@@ -106,5 +106,7 @@ block scripts
             var orgs = !{JSON.stringify(orgs)};
             var model = { user: user, orgs: orgs };
             var viewmodel = new AppViewModel(model);
+
+            window.viewmodel = viewmodel;
             ko.applyBindings(viewmodel);
         });
