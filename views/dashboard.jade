@@ -83,8 +83,8 @@ block content
             div#accordion.well.sidebar-nav4
                 ul.nav(data-bind="foreach: organizations")
                     li
-                        a.accordion-toggle(data-bind="attr: { href: '#' + login }",data-toggle="collapse",data-parent="#accordion")
-                            span.glyphicon.glyphicon-collapse-down
+                        a.accordion-toggle(data-bind="click: toggleCollapse, attr: { href: '#' + login }",data-toggle="collapse",data-parent="#accordion")
+                            span.glyphicon.glyphicon-collapse-down(data-bind="css: { 'glyphicon-collapse-down': isCollapsed(), 'glyphicon-expand': !isCollapsed() }")
                             |  
                             span(data-bind="text: login")
                     ul.nav.panel-collapse.collapse(data-bind="foreach: repositories, attr: {id: login}")
