@@ -22,6 +22,8 @@ exports.dashboard = function(req, res) {
         type: "oauth",
         token: GLOBAL.GITHUB_ACCESS_TOKEN
     });
+    console.log("github authenticated");
+
     github.user.get({}, function(err, usr) {
         github.user.getOrgs({}, function(err, orgs) {
             console.log(err);

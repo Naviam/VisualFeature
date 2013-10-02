@@ -1,5 +1,7 @@
 var http = require('http');
 var express = require('express');
+var AWS = require('aws-sdk');
+var DynamoDBStore = require('connect-dynamodb')(express);
 var passport = require('passport');
 var util = require ('util');
 var GitHubStrategy = require('passport-github').Strategy;
@@ -10,6 +12,9 @@ var sns = require('./routes/sns');
 
 var app = express();
 //var io = socket.listen(app);
+
+// load amazon credentials
+//AWS.config.loadFromPath('./creds/amazon-credentials.json');
 
 // https://github.com/organizations/Naviam/settings/applications/60403
 var GITHUB_CLIENT_ID = process.env.githubClientId || "688b3527f940fb337d1f";
@@ -43,7 +48,11 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
-app.use(express.session({ secret: 'SECRET' }));
+var options = {
+	table: 'vf-sessions',
+	AWSConfigPath: './creds/amazon-credentials.json'
+};
+app.use(express.session({ store: new DynamoDBStore(options), secret: 'keyboard cat' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -67,7 +76,10 @@ passport.use(new GitHubStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the GitHub account with a user record in your database,
       // and return that user instead.
+      console.log("received accessToken from github: " + accessToken);
       GLOBAL.GITHUB_ACCESS_TOKEN = accessToken;
+      console.log("GLOBAL.GITHUB_ACCESS_TOKEN: " + GLOBAL.GITHUB_ACCESS_TOKEN);
+      
       return done(null, profile);
     });
     // User.findOrCreate({ githubId: profile.id }, function (err, user) {
