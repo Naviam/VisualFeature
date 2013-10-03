@@ -9,6 +9,7 @@ var socket = require('socket.io');
 var path = require('path');
 var routes = require('./routes');
 var sns = require('./routes/sns');
+var utils = require('./utils/utils');
 
 var app = express();
 //var io = socket.listen(app);
@@ -48,11 +49,8 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
-var options = {
-	table: 'vf-sessions',
-	AWSConfigPath: './creds/amazon-credentials.json'
-};
-app.use(express.session({ store: new DynamoDBStore(options), secret: 'keyboard cat' }));
+var options = {	table: 'vf-sessions', AWSConfigPath: './creds/amazon-credentials.json' };
+app.use(express.session({ store: new DynamoDBStore(options), secret: 'vf-sessions-848h7f744fsY7' }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
@@ -67,7 +65,7 @@ passport.use(new GitHubStrategy({
   function(accessToken, refreshToken, profile, done) {
     console.log('accessToken: ' + accessToken);
     console.log('refreshToken: ' + refreshToken);
-    console.log('profile: ' + profile);
+    console.log('profile: ' + utils.toString(profile));
     console.log('done: ' + done);
     // asynchronous verification, for effect...
     process.nextTick(function () {
@@ -79,7 +77,7 @@ passport.use(new GitHubStrategy({
       console.log("received accessToken from github: " + accessToken);
       GLOBAL.GITHUB_ACCESS_TOKEN = accessToken;
       console.log("GLOBAL.GITHUB_ACCESS_TOKEN: " + GLOBAL.GITHUB_ACCESS_TOKEN);
-      
+
       return done(null, profile);
     });
     // User.findOrCreate({ githubId: profile.id }, function (err, user) {
