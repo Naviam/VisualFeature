@@ -1,12 +1,5 @@
 var GitHubApi = require("github");
-
-var token = "34387f02666e40c9a6b9409ba15a45ba7beaa7ac";
-var github = new GitHubApi({
-    // required
-    version: "3.0.0",
-    // optional
-    timeout: 5000
-});
+var github = new GitHubApi({ version: "3.0.0", timeout: 5000 });
 
 /*
  * GET home page.
@@ -22,7 +15,6 @@ exports.dashboard = function(req, res) {
         type: "oauth",
         token: GLOBAL.GITHUB_ACCESS_TOKEN
     });
-    console.log("github authenticated");
 
     github.user.get({}, function(err, usr) {
         github.user.getOrgs({}, function(err, orgs) {

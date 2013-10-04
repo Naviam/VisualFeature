@@ -1,0 +1,583 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"pro",
+				"profile"
+			],
+			[
+				"user",
+				"usersRepository"
+			],
+			[
+				"us",
+				"usersRepository"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"acc",
+				"accounts"
+			],
+			[
+				"naviam",
+				"naviamtest"
+			],
+			[
+				"ac",
+				"accounts"
+			],
+			[
+				"set",
+				"Setup"
+			],
+			[
+				"log",
+				"Logout"
+			],
+			[
+				"bt",
+				"btn-group"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"li",
+				"li"
+			],
+			[
+				"drop",
+				"dropdown-menu"
+			],
+			[
+				"d",
+				"dropdown"
+			],
+			[
+				"nav",
+				"navbar-brand"
+			],
+			[
+				"sr",
+				"sr-only"
+			],
+			[
+				"na",
+				"navbar-header"
+			],
+			[
+				"sto",
+				"storyLinks"
+			],
+			[
+				"fo",
+				"found"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"lab",
+				"label-primary"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"s",
+				"stories"
+			],
+			[
+				"st",
+				"stories"
+			],
+			[
+				"in",
+				"Integrations"
+			],
+			[
+				"ene",
+				"Environments"
+			],
+			[
+				"o",
+				"observable"
+			],
+			[
+				"n",
+				"navigation"
+			],
+			[
+				"di",
+				"divider"
+			],
+			[
+				"proc",
+				"process"
+			],
+			[
+				"Cli",
+				"clientID"
+			],
+			[
+				"pr",
+				"process"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 5054,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "repositories/usersRepository.js",
+			"settings":
+			{
+				"buffer_size": 849,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "testoauth.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 1368,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 835,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/dashboard.jade",
+			"settings":
+			{
+				"buffer_size": 7067,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/js/models/AppViewModel.js",
+			"settings":
+			{
+				"buffer_size": 3323,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "node_modules/connect-dynamodb/lib/connect-dynamodb.js",
+			"settings":
+			{
+				"buffer_size": 4979,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 64.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Vitali/Downloads/new_ServiceChannel.PunchOutProcessor.exe.config",
+		"/C/Users/Vitali/Downloads/old_ServiceChannel.PunchOutProcessor.exe.config",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/creds/amazon-credentials.json",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/node_modules/aws-sdk/README.md",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/.elasticbeanstalk/config",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/.elasticbeanstalk/optionsettings.visualFeature-env",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/utils/utils.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/creds/visualfeature-user-credentials.csv",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/routes/evnironments.js",
+		"/C/Users/Vitali/Documents/ServiceClick/ServiceChannel.UI.DashBoard.Web/Controllers/ServiceController.cs",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/index.jade",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/dashboard.jade",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/layout.jade",
+		"/C/Program Files/Sublime Text 2/Pristine Packages/Text.sublime-package",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/github_objects.txt",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/.gitignore",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/mongod",
+		"/C/Users/Vitali/Documents/nodejs/mytest.js",
+		"/C/Users/Vitali/Documents/nodejs/express_example/app.js",
+		"/C/Users/Vitali/Documents/outgoingxml/Macys/Form1.frm",
+		"/C/Users/Vitali/Documents/nodejs/express_example/routes/index.js",
+		"/C/Users/Vitali/Documents/nodejs/express_example/routes/user.js",
+		"/C/Users/Vitali/Documents/nodejs/express_routing/views/layout.jade",
+		"/C/Users/Vitali/Documents/nodejs/express_routing/views/index.jade",
+		"/C/Users/Vitali/Documents/nodejs/express_routing/app.js",
+		"/C/Users/Vitali/Documents/nodejs/express_routing/routes/index.js",
+		"/C/Users/Vitali/Documents/servicechannel.pem",
+		"/C/Users/Vitali/Documents/servicechannel.key",
+		"/C/Users/Vitali/Documents/nodejs/express_routing/routes/user.js",
+		"/C/Users/Vitali/Documents/nodejs/express_example/views/index.jade",
+		"/C/Users/Vitali/Documents/nodejs/fetch.js",
+		"/C/Users/Vitali/Documents/nodejs/package.json",
+		"/C/Users/Vitali/Documents/nodejs/foo.js"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 5054,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4557,
+								4187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2553.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "repositories/usersRepository.js",
+					"settings":
+					{
+						"buffer_size": 849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								545,
+								545
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "testoauth.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "routes/index.js",
+					"settings":
+					{
+						"buffer_size": 1368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								429,
+								429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/layout.jade",
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/dashboard.jade",
+					"settings":
+					{
+						"buffer_size": 7067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1060,
+								1060
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1610.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/js/models/AppViewModel.js",
+					"settings":
+					{
+						"buffer_size": 3323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1541,
+								1541
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1886.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "node_modules/connect-dynamodb/lib/connect-dynamodb.js",
+					"settings":
+					{
+						"buffer_size": 4979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1396,
+								1723
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1380.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 211.0,
+	"status_bar_visible": true
+}

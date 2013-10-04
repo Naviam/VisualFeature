@@ -10,6 +10,7 @@ var path = require('path');
 var routes = require('./routes');
 var sns = require('./routes/sns');
 var utils = require('./utils/utils');
+var usersRepository = require('./repositories/usersRepository');
 
 var app = express();
 //var io = socket.listen(app);
@@ -20,7 +21,7 @@ var app = express();
 // https://github.com/organizations/Naviam/settings/applications/60403
 var GITHUB_CLIENT_ID = process.env.githubClientId || "688b3527f940fb337d1f";
 var GITHUB_CLIENT_SECRET = process.env.githubSecretKey || "7411bdd4c7347721c414b2b260d6a8461f605d9b";
-var GITHUB_CALLBACK_URL = "http://localhost:3000/auth/github/callback";
+var GITHUB_CALLBACK_URL = process.env.githubCallbackUrl || "http://localhost:3000/auth/github/callback";
 
 GLOBAL.GITHUB_ACCESS_TOKEN = null;
 
@@ -74,6 +75,7 @@ passport.use(new GitHubStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the GitHub account with a user record in your database,
       // and return that user instead.
+      usersRepository.create(profile);
       console.log("received accessToken from github: " + accessToken);
       GLOBAL.GITHUB_ACCESS_TOKEN = accessToken;
       console.log("GLOBAL.GITHUB_ACCESS_TOKEN: " + GLOBAL.GITHUB_ACCESS_TOKEN);
