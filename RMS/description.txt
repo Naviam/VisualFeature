@@ -21,4 +21,40 @@ determine maximum work order from the list
 save this work order to amazon dynamodb table where pairs of pin providerid and last work order are columns
 end
 
+procedure name
+/api2/notifications/providers/send
+
+visual cron will call it every minute
+
+foreach setting in provider_settings
+{
+	setting.interval - should go to sns
+	setting.url - should go to sns
+	setting.credentials - should go to sns
+	setting.isNew - new provider integration
+
+	obtain last processed wo or wo note from cache / dynamo for provider
+
+	if setting.isNew
+		obtain all workoders > last processed work order
+		foreach workorder in workorders
+			publish workorder to sns
+		save last processed work order to cache / amazon
+	else
+		obtain next workorder > last processed work order
+		send notification to setting.url with setting.credentials
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 

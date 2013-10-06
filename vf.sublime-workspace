@@ -144,6 +144,14 @@
 	"buffers":
 	[
 		{
+			"file": "testoauth.js",
+			"settings":
+			{
+				"buffer_size": 2684,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "app.js",
 			"settings":
 			{
@@ -152,59 +160,11 @@
 			}
 		},
 		{
-			"file": "repositories/usersRepository.js",
+			"file": "views/index.jade",
 			"settings":
 			{
-				"buffer_size": 849,
+				"buffer_size": 1659,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "testoauth.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/index.js",
-			"settings":
-			{
-				"buffer_size": 1368,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/layout.jade",
-			"settings":
-			{
-				"buffer_size": 835,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "views/dashboard.jade",
-			"settings":
-			{
-				"buffer_size": 7067,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/js/models/AppViewModel.js",
-			"settings":
-			{
-				"buffer_size": 3323,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "node_modules/connect-dynamodb/lib/connect-dynamodb.js",
-			"settings":
-			{
-				"buffer_size": 4979,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -232,6 +192,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/app.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/repositories/usersRepository.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/routes/index.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/layout.jade",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/dashboard.jade",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/client/js/models/AppViewModel.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/node_modules/connect-dynamodb/lib/connect-dynamodb.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/node_modules/passport-github/lib/passport-github/index.js",
+		"/C/Users/Vitali/Documents/GitHub/VisualFeature/node_modules/passport-github/lib/passport-github/strategy.js",
 		"/C/Users/Vitali/Downloads/new_ServiceChannel.PunchOutProcessor.exe.config",
 		"/C/Users/Vitali/Downloads/old_ServiceChannel.PunchOutProcessor.exe.config",
 		"/C/Users/Vitali/Documents/GitHub/VisualFeature/creds/amazon-credentials.json",
@@ -243,8 +212,6 @@
 		"/C/Users/Vitali/Documents/GitHub/VisualFeature/routes/evnironments.js",
 		"/C/Users/Vitali/Documents/ServiceClick/ServiceChannel.UI.DashBoard.Web/Controllers/ServiceController.cs",
 		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/index.jade",
-		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/dashboard.jade",
-		"/C/Users/Vitali/Documents/GitHub/VisualFeature/views/layout.jade",
 		"/C/Program Files/Sublime Text 2/Pristine Packages/Text.sublime-package",
 		"/C/Users/Vitali/Documents/GitHub/VisualFeature/github_objects.txt",
 		"/C/Users/Vitali/Documents/GitHub/VisualFeature/.gitignore",
@@ -272,7 +239,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 96.0,
 		"where_history":
 		[
 		]
@@ -304,6 +271,34 @@
 			[
 				{
 					"buffer": 0,
+					"file": "testoauth.js",
+					"settings":
+					{
+						"buffer_size": 2684,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								959,
+								959
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1224.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "app.js",
 					"settings":
 					{
@@ -314,52 +309,28 @@
 						"selection":
 						[
 							[
-								4557,
-								4187
+								335,
+								308
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2553.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "repositories/usersRepository.js",
-					"settings":
-					{
-						"buffer_size": 849,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								545,
-								545
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 322.0,
+						"translation.y": 120.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "testoauth.js",
+					"file": "views/index.jade",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1659,
 						"regions":
 						{
 						},
@@ -372,149 +343,12 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "routes/index.js",
-					"settings":
-					{
-						"buffer_size": 1368,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								429,
-								429
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "views/layout.jade",
-					"settings":
-					{
-						"buffer_size": 835,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								121,
-								121
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/Jade/Jade.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 138.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "views/dashboard.jade",
-					"settings":
-					{
-						"buffer_size": 7067,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1060,
-								1060
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1610.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "client/js/models/AppViewModel.js",
-					"settings":
-					{
-						"buffer_size": 3323,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1541,
-								1541
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1886.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "node_modules/connect-dynamodb/lib/connect-dynamodb.js",
-					"settings":
-					{
-						"buffer_size": 4979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1396,
-								1723
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1380.0,
+						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
