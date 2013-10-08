@@ -22,39 +22,48 @@ save this work order to amazon dynamodb table where pairs of pin providerid and 
 end
 
 procedure name
-/api2/notifications/providers/send
+/api2/notifications/workorders/send
 
 visual cron will call it every minute
 
+begin
+provider_settings = obtain provider_settings with providers which are subscribed to work order notifications
+dictionary = obtain last processed wo from cache / dynamo for all providers with old process
+(it should be a single procedure call that retrieves next work order for each provider we sent to this procedure as incoming parameters)
+example: getNextWorkOrderForProviders (@providers nvachar(4000))
+result: select providerId, nextWorkOrder
+
 foreach setting in provider_settings
 {
-	setting.interval - should go to sns
-	setting.url - should go to sns
-	setting.credentials - should go to sns
-	setting.isNew - new provider integration
+	add log message with provider id and setting object
 
-	obtain last processed wo or wo note from cache / dynamo for provider
-
+	// send work order notifications
 	if setting.isNew
-		obtain all workoders > last processed work order
+		// to be described later
+	else
+		obtain next workorder for provider from dictionary
+		generate xml messages in .net
+		send notification to setting.url with setting.credentials
+		save last processed work order to cache / dynamo
+}
+end
+
+obtain all workoders > last processed work order for provider
 		foreach workorder in workorders
 			publish workorder to sns
-		save last processed work order to cache / amazon
-	else
-		obtain next workorder > last processed work order
-		send notification to setting.url with setting.credentials
+			// sns will take care of notification format (xml)
+			add log message with published work order and sns topic name
+		save last processed work order to cache / dynamo
 
+{
+	providerId: 200000544, // or pin?
+	url: "",
+	interval: 4,
 
 }
 
+продакшн
+[Csc] c:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:TRACE /highentropyva- /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /reference:C:\BuildAgent\work\410647e6ec55315a\ServiceChannel.Model\bin\Release\ServiceChannel.Model.dll /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" /debug:pdbonly /filealign:512 /optimize+ /out:obj\Release\TaxValidationTypes.dll /target:library /utf8output Entity\Invoice.cs Entity\TaxValidationInfo.cs Entity\TaxValidationResult.cs Interfaces\IAvalaraService.cs Interfaces\IStoreService.cs Interfaces\ITax.cs Interfaces\ITaxResult.cs Interfaces\ITaxValidation.cs Interfaces\ITaxValidationHelper.cs Interfaces\ITaxwareService.cs Properties\AssemblyInfo.cs "C:\BuildAgent\temp\buildTmp\.NETFramework,Version=v4.0.AssemblyAttributes.cs"
 
-
-
-
-
-
-
-
-
-
-
+стейджинг
+[Csc] c:\Windows\Microsoft.NET\Framework\v4.0.30319\Csc.exe /noconfig /nowarn:1701,1702 /nostdlib+ /platform:AnyCPU /errorreport:prompt /define:DEBUG;TRACE /highentropyva- /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /reference:"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /reference:C:\BuildAgent\work\c93f109b4e949ec0\ScProcessingModules\TaxValidation\TaxValidationTypes\bin\Deploy-Staging\TaxValidationTypes.dll /debug+ /debug:full /filealign:512 /out:obj\Deploy-Staging\DbHelper.dll /target:library /utf8output Common\DbUtility.cs TaxValidationDbService.cs DataProviders\InvoiceDbProvider.cs Common\IDbProvider.cs Properties\AssemblyInfo.cs DataProviders\TaxValidationInfoDbProvider.cs "C:\BuildAgent\temp\buildTmp\.NETFramework,Version=v4.0.AssemblyAttributes.cs"
