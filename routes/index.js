@@ -43,3 +43,17 @@ exports.stories = function (req, res) {
         res.json(stories);
     });
 };
+
+exports.clean = function (req, res) {
+    github.events.getFromRepo(
+        {
+            user: "Naviam",
+            repo: "VisualFeature"
+        },
+        function(err, body) {
+            console.log(err);
+            console.log(body);
+            res.send(body);
+        }
+    );
+};

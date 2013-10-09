@@ -10,6 +10,7 @@ var path = require('path');
 var routes = require('./routes');
 var sns = require('./routes/sns');
 var utils = require('./utils/utils');
+//var sources = require('./utils/sources');
 var usersRepository = require('./repositories/usersRepository');
 
 var app = express();
@@ -19,8 +20,8 @@ var app = express();
 //AWS.config.loadFromPath('./creds/amazon-credentials.json');
 
 // https://github.com/organizations/Naviam/settings/applications/60403
-var GITHUB_CLIENT_ID = process.env.githubClientId || "688b3527f940fb337d1f";
-var GITHUB_CLIENT_SECRET = process.env.githubSecretKey || "7411bdd4c7347721c414b2b260d6a8461f605d9b";
+var GITHUB_CLIENT_ID = process.env.githubClientId || "d24dfef0f98062c793f6";
+var GITHUB_CLIENT_SECRET = process.env.githubSecretKey || "e5fe11d7e985757ebf8af9d48392b8f8077d1fb9";
 var GITHUB_CALLBACK_URL = process.env.githubCallbackUrl || "http://localhost:3000/auth/github/callback";
 
 GLOBAL.GITHUB_ACCESS_TOKEN = null;
@@ -110,6 +111,7 @@ app.get('/dashboard', ensureAuthenticated, routes.dashboard);
 app.get('/repositories/:org', routes.repositories);
 app.get('/stories/:owner/:repo', routes.stories);
 app.post('/sns', sns.sns);
+app.get('/clean', routes.clean);
 
 http.createServer(app).listen(app.get('port'), app.get('host'), function() {
   console.log('Express server listening on port ' + app.get('port'));
