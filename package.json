@@ -7,7 +7,18 @@
   "author": "Vitali Hatalski <vhatalski@naviam.com>",
   "dependencies": {
     "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
+    "aws-sdk": "~1.7.1",
+    "connect-dynamodb": "~1.0.4",
+    "express": "~3.2.6",
+    "github": "~0.1.10",
+    "jade": "~0.35.0",
+    "mocha": "~1.13.0",
+    "passport": "~0.1.17",
+    "passport-github": "~0.1.5",
+    "passport-oauth": "~1.0.0",
+    "pivotal": "~0.2.0",
+    "socket.io": "~0.9.16",
+    "socket.io-client": "~0.9.16",
+    "zombie": "~2.0.0"
   }
 }
