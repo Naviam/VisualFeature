@@ -55,7 +55,7 @@ app.use(express.session({ store: new DynamoDBStore(options), secret: 'vf-session
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 passport.use(new GitHubStrategy({
     clientID: GITHUB_CLIENT_ID,
